@@ -40,5 +40,15 @@ Options can be passed in as a `{ key: value }` object literal. Available options
 You can remove the auto-expander from a textarea by passing 'destroy' (as string, not in an object literal).
 
 
+## Installation
+
+Install this package via [npm](https://www.npmjs.org/):
+
+```sh
+npm install jquery-autoexpand
+```
+
+Or simply copy jquery.autoexpand.js into your project.
+
 ## License
 Autoexpand is [MIT](http://opensource.org/licenses/MIT) licensed.

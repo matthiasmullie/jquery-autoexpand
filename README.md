@@ -35,7 +35,7 @@ Options can be passed in as a `{ key: value }` object literal. Available options
 | property      | default value | description                                                   |
 |---------------|:-------------:|---------------------------------------------------------------|
 | animationTime | 50            | Time in milliseconds to animate to new height                 |
-| windowPadding | 10            | Amount of pixels to preserve between textarea & window bottom |
+| windowPadding | 20            | Amount of pixels to preserve between textarea & window bottom |
 
 You can remove the auto-expander from a textarea by passing 'destroy' (as string, not in an object literal).
 

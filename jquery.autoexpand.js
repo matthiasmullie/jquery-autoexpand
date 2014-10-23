@@ -30,7 +30,7 @@ $.fn.autoExpand = function(options) {
 		this.options = $.extend({
 			// default options
 			animationTime: 50,
-			windowPadding: 10
+			windowPadding: 20
 		}, options);
 
 		this.saveState();

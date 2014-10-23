@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="jquery-autoexpand : Auto-expands textareas so they grow as you type">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>jquery-autoexpand</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/matthiasmullie/jquery-autoexpand">View on GitHub</a>
+
+          <h1 id="project_title">jquery-autoexpand</h1>
+          <h2 id="project_tagline">Auto-expands textareas so they grow as you type</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/matthiasmullie/jquery-autoexpand/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/matthiasmullie/jquery-autoexpand/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="jquery-autoexpand" class="anchor" href="#jquery-autoexpand"><span class="octicon octicon-link"></span></a>jquery-autoexpand</h1>
+
+<p>A textarea will automatically grow and shrink in height as you add or remove content to it.</p>
+
+<ul>
+<li>The textarea will never shrink smaller than its original height</li>
+<li>The textarea will never grow beyong the bottom edge of the window. Instead, a scroll bar show up in the textarea as more text as added to the textarea.</li>
+</ul>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'textarea'</span><span class="p">).</span><span class="nx">autoExpand</span><span class="p">();</span>
+</pre></div>
+
+<p>Or if you want to customize some of the options:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'textarea'</span><span class="p">).</span><span class="nx">autoExpand</span><span class="p">({</span> <span class="nx">animationTime</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">windowPadding</span><span class="o">:</span> <span class="mi">100</span> <span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="remove" class="anchor" href="#remove"><span class="octicon octicon-link"></span></a>Remove</h2>
+
+<p>If you no longer need the textarea to auto-expand and you want to reset it:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'textarea'</span><span class="p">).</span><span class="nx">autoExpand</span><span class="p">(</span><span class="s1">'destroy'</span><span class="p">);</span>
+</pre></div>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<p>Options can be passed in as a <code>{ key: value }</code> object literal. Available options are:</p>
+
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th align="center">default value</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>animationTime</td>
+<td align="center">50</td>
+<td>Time in milliseconds to animate to new height</td>
+</tr>
+<tr>
+<td>windowPadding</td>
+<td align="center">20</td>
+<td>Amount of pixels to preserve between textarea &amp; window bottom</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can remove the auto-expander from a textarea by passing 'destroy' (as string, not in an object literal).</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Install this package via <a href="https://www.npmjs.org/">npm</a>:</p>
+
+<div class="highlight highlight-sh"><pre>npm install jquery-autoexpand
+</pre></div>
+
+<p>Or simply copy jquery.autoexpand.js into your project.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>jquery-autoexpand is <a href="http://opensource.org/licenses/MIT">MIT</a> licensed.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">jquery-autoexpand maintained by <a href="https://github.com/matthiasmullie">matthiasmullie</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

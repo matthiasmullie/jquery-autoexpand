@@ -20,6 +20,7 @@ $.fn.autoExpand = function(options) {
 	 */
 	var autoExpand = function(element, options) {
 		this.$element = $(element);
+		this.excludePadding = this.$element.css('box-sizing') === 'content-box';
 
 		this.destroy();
 		if (options === 'destroy') {
@@ -41,12 +42,15 @@ $.fn.autoExpand = function(options) {
 	 * to work, then attaches the keyup event handler.
 	 */
 	autoExpand.prototype.init = function() {
+		// height works differently depending on content-box or border-box...
+		var height = this.excludePadding ? this.$element.height() : this.$element.outerHeight();
+
 		this.applyStyles({
 			overflow: 'hidden',
 			resize: 'none',
 
 			// auto-expansion shouldn't shrink too much; set default height as min
-			'min-height': this.$element.outerHeight()
+			'min-height': height
 		});
 
 		this.$element.on(
@@ -107,9 +111,9 @@ $.fn.autoExpand = function(options) {
 	 * Auto-expand/shrink as content changes.
 	 */
 	autoExpand.prototype.autoExpand = function() {
-		var scrollHeight, minHeight, windowBottom, maxHeightIncrease,
+		var scrollHeight, totalHeight, minHeight, maxHeight, windowBottom,
 			height = this.$element.height(),
-			padding = this.$element.outerHeight() - this.$element.height();
+			padding = this.$element.outerHeight() - height;
 
 		/*
 		 * Collapse to 0 height to get accurate scrollHeight for the content,
@@ -124,21 +128,28 @@ $.fn.autoExpand = function(options) {
 		scrollHeight = this.$element.get(0).scrollHeight;
 		this.$element.height(height);
 
+		totalHeight = scrollHeight;
+
 		/*
 		 * Additional padding of <windowPadding> px between the textarea & the
 		 * bottom of the page, so we don't end up with a textarea larger than
 		 * the screen.
 		 */
 		windowBottom = $(window).scrollTop() + $(window).height();
-		maxHeightIncrease = windowBottom - this.options.windowPadding;
-		if (scrollHeight + height + padding >= maxHeightIncrease) {
+		maxHeight = windowBottom - this.options.windowPadding - this.$element.offset().top;
+		if (totalHeight >= maxHeight) {
 			// override new height to be near the bottom edge, not past it
-			scrollHeight = maxHeightIncrease - height - padding;
+			scrollHeight = maxHeight;
 
 			// if we can't expand, ensure overflow-y is set to auto
-			this.$element.css( 'overflow-y', 'auto' );
+			this.$element.css('overflow-y', 'auto');
 		} else {
 			this.$element.css('overflow-y', 'hidden');
+		}
+
+		// height works differently depending on content-box or border-box...
+		if (this.excludePadding) {
+			scrollHeight -= padding;
 		}
 
 		/*

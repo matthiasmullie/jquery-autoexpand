@@ -1,0 +1,18 @@
+<div id="demo">
+	<section>
+		<h3>Without auto-expand</h3>
+		<textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nulla convallis neque iaculis efficitur at ut metus. Vivamus sit amet elit et metus ultricies pretium. Nullam hendrerit massa mauris, in euismod tortor luctus quis. Morbi elementum volutpat orci, quis venenatis arcu tincidunt eget. Ut vehicula iaculis metus non imperdiet. Curabitur fermentum dolor ut accumsan lobortis. Nunc eget porttitor elit. Quisque at nunc mi. Vivamus tempor magna urna, a imperdiet arcu aliquam eu. Fusce accumsan tempor sem, id luctus nibh porta in. Donec pharetra tincidunt sapien, et ornare libero posuere sit amet. Fusce urna leo, fermentum id mollis eu, tincidunt et tortor.</textarea>
+	</section>
+	<section>
+		<h3>With auto-expand</h3>
+		<textarea id="autoexpand">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nulla convallis neque iaculis efficitur at ut metus. Vivamus sit amet elit et metus ultricies pretium. Nullam hendrerit massa mauris, in euismod tortor luctus quis. Morbi elementum volutpat orci, quis venenatis arcu tincidunt eget. Ut vehicula iaculis metus non imperdiet. Curabitur fermentum dolor ut accumsan lobortis. Nunc eget porttitor elit. Quisque at nunc mi. Vivamus tempor magna urna, a imperdiet arcu aliquam eu. Fusce accumsan tempor sem, id luctus nibh porta in. Donec pharetra tincidunt sapien, et ornare libero posuere sit amet. Fusce urna leo, fermentum id mollis eu, tincidunt et tortor.</textarea>
+	</section>
+</div>
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+<script src='https://raw.githubusercontent.com/matthiasmullie/jquery-autoexpand/master/jquery.autoexpand.js'></script>
+<script>
+	$(function(){
+		$('textarea#autoexpand').autoExpand();
+	});
+</script>

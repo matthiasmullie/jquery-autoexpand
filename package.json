@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/matthiasmullie/jquery-autoexpand/issues"
   },
-  "homepage": "https://github.com/matthiasmullie/jquery-autoexpand",
+  "homepage": "http://www.mullie.eu/jquery-autoexpand/",
   "dependencies": {
     "jquery": ">=1.7.0"
   }

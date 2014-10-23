@@ -51,4 +51,4 @@ npm install jquery-autoexpand
 Or simply copy jquery.autoexpand.js into your project.
 
 ## License
-Autoexpand is [MIT](http://opensource.org/licenses/MIT) licensed.
+jquery-autoexpand is [MIT](http://opensource.org/licenses/MIT) licensed.

@@ -1,38 +1,44 @@
 # jquery-autoexpand
 
-Auto-expands textareas so they grow as you type.
+A textarea will automatically grow and shrink in height as you add or remove content to it.
+
+* The textarea will never shrink smaller than its original height
+* The textarea will never grow beyong the bottom edge of the window. Instead, a scroll bar show up in the textarea as more text as added to the textarea.
+
+
+## Usage
+
+```javascript
+$('textarea').autoExpand();
+```
+
+Or if you want to customize some of the options:
+
+```javascript
+$('textarea').autoExpand({ animationTime: 0, windowPadding: 100 });
+```
+
+
+## Remove
+
+If you no longer need the textarea to auto-expand and you want to reset it:
+
+```javascript
+$('textarea').autoExpand('destroy');
+```
+
 
 ## Options
 
-* int **animationTime** *(50)*
-Time in milliseconds to animate to new height
-* int **windowPadding** *(10)*
-Amount of pixels to preserve between textarea & window bottom
+Options can be passed in as a `{ key: value }` object literal. Available options are:
 
-You can also destroy autoaxpander by calling it with 'destroy' as parameter, instead of an options object.
+| property      | default value | description                                                   |
+|---------------|:-------------:|---------------------------------------------------------------|
+| animationTime | 50            | Time in milliseconds to animate to new height                 |
+| windowPadding | 10            | Amount of pixels to preserve between textarea & window bottom |
 
-## Example
+You can remove the auto-expander from a textarea by passing 'destroy' (as string, not in an object literal).
 
-* multiple textareas
-* immediate (0ms) animation time
-* larget (100px) padding between textarea & window bottom
-* link to destroy autoexpander
-
-Looks like:
-
-```html
-<textarea name="text"></textarea>
-<textarea name="text2"></textarea>
-<a href="#">Reset</a>
-
-<script>
-    $('textarea').autoExpand({ animationTime: 0, windowPadding: 100 });
-
-    $('a').click(function(e) {
-        $('textarea').autoExpand('destroy');
-    });
-</script>
-```
 
 ## License
 Autoexpand is [MIT](http://opensource.org/licenses/MIT) licensed.

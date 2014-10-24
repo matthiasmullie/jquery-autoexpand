@@ -1,0 +1,33 @@
+{
+  "name": "jquery-autoexpand",
+  "version": "1.0.2",
+  "homepage": "http://www.mullie.eu/jquery-autoexpand",
+  "authors": [{
+    "name": "Matthias Mullie",
+    "email": "autoexpand@mullie.eu",
+    "homepage": "http://www.mullie.eu/"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthiasmullie/jquery-autoexpand.git"
+  },
+  "description": "Auto-expands textareas so they grow as you type.",
+  "main": "jquery.autoexpand.js",
+  "keywords": [
+    "expand",
+    "auto-expand",
+    "textarea",
+    "jquery-plugin"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": ">= 1.7.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "name": "jquery-autoexpand",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Auto-expands textareas so they grow as you type.",
   "main": "jquery.autoexpand.js",
   "scripts": {
@@ -18,14 +18,14 @@
   ],
   "author": {
     "name": "Matthias Mullie",
-    "email": "npm@mullie.eu",
+    "email": "autoexpand@mullie.eu",
     "url": "http://www.mullie.eu/"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/matthiasmullie/jquery-autoexpand/issues"
   },
-  "homepage": "https://github.com/matthiasmullie/jquery-autoexpand",
+  "homepage": "http://www.mullie.eu/jquery-autoexpand",
   "dependencies": {
     "jquery": ">=1.7.0"
   }

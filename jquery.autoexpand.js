@@ -156,7 +156,7 @@ $.fn.autoExpand = function(options) {
 		 * Only animate height change if there actually is a change; we don't
 		 * want every keystroke firing a <animationTime> ms animation.
 		 */
-		minHeight = parseInt(this.$element.css('min-height'));
+		minHeight = parseInt(this.$element.css('min-height'), 10);
 		if (scrollHeight !== this.$element.height() + padding &&
 			(scrollHeight > minHeight || this.$element.height() + padding > minHeight)
 		) {

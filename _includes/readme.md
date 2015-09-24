@@ -1,7 +1,7 @@
 A textarea will automatically grow and shrink in height as you add or remove content to it.
 
 * The textarea will never shrink smaller than its original height
-* The textarea will never grow beyong the bottom edge of the window. Instead, a scroll bar show up in the textarea as more text as added to the textarea.
+* The textarea will never grow beyond the bottom edge of the window. Instead, a scroll bar show up in the textarea as more text is added to the textarea.
 
 
 ## Usage
